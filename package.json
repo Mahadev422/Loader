@@ -1,7 +1,7 @@
 {
   "name": "loader",
   "homepage": "https://mahadev422.github.io/loader",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
