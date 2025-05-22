@@ -11,7 +11,7 @@ function OuterRing() {
   });
   return (
     <mesh ref={ref}>
-      <torusGeometry args={[0.25, 0.03, 64, 128]} />
+      <torusGeometry args={[0.2, 0.03, 64, 128]} />
       <meshStandardMaterial
         color="#3b82f6"
         emissive="#3b82f6"
@@ -25,11 +25,11 @@ function OuterRing() {
 function InnerRing() {
   const ref = useRef();
   useFrame((_, delta) => {
-    ref.current.rotation.x += delta * 3;
+    ref.current.rotation.x += delta * 2;
   });
   return (
     <mesh ref={ref}>
-      <torusGeometry args={[0.2, 0.03, 64, 128]} />
+      <torusGeometry args={[0.15, 0.03, 64, 128]} />
       <meshStandardMaterial
         color="#3b82f6"
         emissive="#60a5fa"
@@ -46,7 +46,7 @@ function InnerGlowSphere() {
 
   return (
     <animated.mesh>
-      <sphereGeometry args={[0.2, 32, 32]} />
+      <sphereGeometry args={[0.15, 32, 32]} />
       <animated.meshBasicMaterial
         color="#93c5fd"
         transparent
